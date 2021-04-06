@@ -12,7 +12,7 @@
     <h2>Return Data Type</h2>
     <button
       class="btn"
-      onclick="getDataType('abc', 123, true, ['a1','a2'], {}, null)"
+      onclick="getDataType('abc', 123, true, ['a1','a2'], {}, null, undefined)"
     >
       GET DATA TYPE
     </button>
@@ -22,10 +22,10 @@
     </p>
 
     <script>
-      function getDataType(a, b, c, d, e, f) {
+      function getDataType(a, b, c, d, e, f, g) {
         var p = document.getElementById("demo");
 
-        p.innerHTML = `The dataTypes for ${a},${b},${c},${d},${e},${f} are ${typeof a},${typeof b},${typeof c},${typeof d},${typeof e} ${typeof f}`;
+        p.innerHTML = `The dataTypes for ${a},${b},${c},${d},${e},${f},${g} are ${typeof a},${typeof b},${typeof c},${typeof d},${typeof e} ,${typeof f}, ${typeof g}`;
       }
     </script>
   </body>
