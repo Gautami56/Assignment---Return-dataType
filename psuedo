@@ -1,1 +1,25 @@
 
+#pseudo code
+if "input" exists
+    if typeOf input is 'string'
+    print String
+        "DataType-String"
+    if typeOf input is 'number'
+    print Number
+        "DataType-Number"
+    if typeOf input is'boolean'
+    print Boolean
+        "DataType-Boolean"
+    if instanceOf input is 'array'
+    print Array
+        "DataType-Array"
+else
+    if input is null && typeOf input is 'object'
+    print Object
+        "DataType-Object"
+    if input is false && typeOf input is 'boolean'
+    print Boolean
+        "DataType-Boolean"
+    else 
+     print Undefined
+        "DataType-Undefined"
