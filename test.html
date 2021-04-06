@@ -12,7 +12,7 @@
     <h2>Return Data Type</h2>
     <button
       class="btn"
-      onclick="getDataType('abc', 123, true, ['a1','a2'], {}, null, undefined)"
+      onclick="getDataType(null)"
     >
       GET DATA TYPE
     </button>
@@ -22,11 +22,33 @@
     </p>
 
     <script>
-      function getDataType(a, b, c, d, e, f, g) {
+      function getDataType(input) {
         var p = document.getElementById("demo");
-
-        p.innerHTML = `The dataTypes for ${a},${b},${c},${d},${e},${f},${g} are ${typeof a},${typeof b},${typeof c},${typeof d},${typeof e} ,${typeof f}, ${typeof g}`;
-      }
+        if(input)
+        {
+          if(typeof(input) === 'string')
+          p.innerHTML = `${input} is of Data Type- String`
+          else if(typeof(input) === 'number')
+          p.innerHTML = `${input} is of Data Type- Number`
+          else if(typeof(input) === 'boolean')
+          p.innerHTML = `${input} is of Data Type- Boolean`
+          else if(typeof(input) === 'undefined')
+          p.innerHTML = `${input} is of Data Type- Undefined`
+          else if(Array.isArray(input))
+          p.innerHTML = `${input} is of Data Type- Array`
+          else if(typeof(input) === 'object')
+          p.innerHTML = `${input} is of Data Type- Object` 
+        }
+        else{
+          console.log(typeof(input))
+          if(input === null && typeof(input) === 'object')
+            p.innerHTML = `${input} is of Data Type- Object` 
+          else if(input === false && typeof(input) === 'boolean')
+            p.innerHTML = `${input} is of Data Type- Boolean`
+          else 
+            p.innerHTML = `${input} is of Data Type- Undefined`          
+        }  
+       }
     </script>
   </body>
 </html>
